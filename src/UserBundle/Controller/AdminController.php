@@ -14,8 +14,10 @@ class AdminController
             '<html><body>test</body></html>'
         );
     }
-    
-    public function addclientAction()
+/**
+ * @Route("/addClient", name="_adduser")
+ */
+    public function addclient()
     {
    $clientManager = $this->get('fos_oauth_server.client_manager.default');
    $client = $clientManager->createClient();
