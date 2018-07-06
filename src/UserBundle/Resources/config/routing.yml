@@ -5,3 +5,6 @@ user_homepage:
 admin:
     path:   /admin
     defaults: { _controller: UserBundle:Admin:index}
+admin:
+    path:   /addClient
+    defaults: { _controller: UserBundle:Admin:index}

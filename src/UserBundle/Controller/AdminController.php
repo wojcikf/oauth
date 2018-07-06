@@ -14,4 +14,15 @@ class AdminController
             '<html><body>test</body></html>'
         );
     }
+    
+    public function addclientAction()
+    {
+   $clientManager = $this->get('fos_oauth_server.client_manager.default');
+   $client = $clientManager->createClient();
+   $client->setRedirectUris(array('http://adam.wroclaw.pl'));
+   $client->setAllowedGrantTypes(array('token', 'authorization_code'));
+   $clientManager->updateClient($client);
+   $output = sprintf("Added client with id: %s secret: %s",$client->getPublicId(),$client->getSecret());
+   return new Response($output);
+}
 }

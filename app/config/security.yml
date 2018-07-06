@@ -19,10 +19,19 @@ security:
         admin_area:
             pattern:    ^/admin
             http_basic: ~
-
+        oauth_token:
+            pattern:    ^/oauth/v2/token
+            security:   false
+        oauth_authorize:
+            pattern:    ^/oauth/v2/auth
+            http_basic: ~
+        api:
+            pattern:    ^/api
+            fos_oauth:  true
+            stateless:  true
     access_control:
         - { path: ^/admin, roles: ROLE_ADMIN }
-         
+        - { path: ^/api, roles: [ IS_AUTHENTICATED_FULLY ] }
     # https://symfony.com/doc/current/security.html#b-configuring-how-users-are-loaded
     providers:
         in_memory:

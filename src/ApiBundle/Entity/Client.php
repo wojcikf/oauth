@@ -1,7 +1,7 @@
 <?php
 // src/ApiBundle/Entity/Client.php
 
-namespace Acme\ApiBundle\Entity;
+namespace ApiBundle\Entity;
 
 use FOS\OAuthServerBundle\Entity\Client as BaseClient;
 use Doctrine\ORM\Mapping as ORM;
