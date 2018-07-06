@@ -4,7 +4,7 @@ namespace UserBundle\Entity;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Doctrine\ORM\Mapping as ORM;
 /**
- * Example\UserBundle\Entity\User
+ * UserBundle\Entity\User
  * 
  * @ORM\Entity 
  */
